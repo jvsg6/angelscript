@@ -14,7 +14,19 @@ class Inherit
 	}
 	int CheckInt()
 	{
-		return 0;
+		return 123456.7;
+	}
+	void IfInt(int a)
+	{
+		
+		if (a == 1)
+		{
+			print("Yess, im work!!!");
+		}
+		else
+		{
+			print("Nonononon");
+		}
 	}
 	void DoSomething()
 	{

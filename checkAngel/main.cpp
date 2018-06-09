@@ -66,6 +66,7 @@ int main(int argc, char *argv[])
       return 0;
     }
     asIScriptContext *ctx = engine->CreateContext();
+    /*
     asIScriptModule *module = engine->GetModule("MyModule");
     auto type_id=module->GetTypeIdByDecl("Inherit");
     if( type_id < 0 )
@@ -81,10 +82,13 @@ int main(int argc, char *argv[])
     }
     asIScriptFunction *PreDrawPhaseFunc;
     PreDrawPhaseFunc=type->GetMethodByDecl("void PreDrawPhase()");
-    asIScriptFunction *factory = type->GetFactoryByDecl("Inherit @Inherit()");
+    asIScriptFunction *factory = type->GetFactoryByDecl("Inherit @Inherit()");*/
     Inherit A(engine, ctx, "MyModule", "Inherit");
     Inherit B(engine, ctx, "MyModule", "Inherit");
     A.PostDrawPhase();
+    int bb = A.CheckInt();
+    A.IfInt();
+    cout<<bb<<endl;
     ctx->Release();
     engine->ShutDownAndRelease();
     return 0;

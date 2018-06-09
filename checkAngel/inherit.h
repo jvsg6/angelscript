@@ -13,11 +13,12 @@ class Inherit
     void PreDrawPhase();
     void PostDrawPhase();
     int CheckInt();
+    void IfInt();
 
     private:
         asIScriptContext *ctx;
         asIScriptObject *obj;
-        asIScriptFunction *PreDrawPhaseFunc, *PostDrawPhaseFunc;
+        asIScriptFunction *PreDrawPhaseFunc, *PostDrawPhaseFunc, *CheckIntFunc, *IfIntFunc;
 };
 
 #endif // INHERIT_H
