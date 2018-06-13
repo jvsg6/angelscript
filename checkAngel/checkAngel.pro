@@ -10,7 +10,8 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    inherit.cpp
+    inherit.cpp \
+    inherit_2.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -27,4 +28,5 @@ include($${PWD}/default_settings.pri)
 include($${ANGELSCRIPT_DIR}/angelscript.pri)
 
 HEADERS += \
-    inherit.h
+    inherit.h \
+    inherit_2.h
